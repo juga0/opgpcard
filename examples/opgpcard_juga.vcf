@@ -1,0 +1,10 @@
+begin:vcard
+fn:juga 
+n:juga
+email;internet:juga@riseup.net
+key;pgp;http://pool.sks-keyservers.net:11371/pks/lookup?op=get&search=juga@riseup.net
+OPENPGP4FPR:2DA81D01455C3A0032198850F305447AF806D46B
+X-KADDRESSBOOK-OPENPGPFP:2DA81D01455C3A0032198850F305447AF806D46B
+NOTE:vCard generate with opgpcard (https://github.com/juga0/opgpcard)
+version:2.1
+end:vcard

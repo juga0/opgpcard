@@ -1,0 +1,18 @@
+sudo: required
+language: python
+dist: trusty
+python:
+    - '3.6'
+before_install:
+  - sudo apt install libgpgme++2 libgpgme11-dev
+install:
+  - pip install -U tox
+
+env:
+  matrix:
+    - TESTENV=doc
+    - TESTENV=py36
+    - TESTENV=lint
+
+script:
+  - tox -e $TESTENV tests/

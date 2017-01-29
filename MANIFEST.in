@@ -1,0 +1,16 @@
+include *.rst
+include .editorconfig
+include LICENSE
+include *.txt
+include tox.ini
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+recursive-include docs *.svg
+recursive-include docs *.vcf
+recursive-include opgpcard *.svg
+recursive-include opgpcard *.vcf
+recursive-include tests *.py
+recursive-include examples *.svg
+recursive-include examples *.vcf
