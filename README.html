@@ -1,0 +1,142 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>opgpcard - OpenPGP Card &#8212; opgpcard 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Welcome to opgpcard’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="opgpcard-openpgp-card">
+<h1>opgpcard - OpenPGP Card<a class="headerlink" href="#opgpcard-openpgp-card" title="Permalink to this headline">¶</a></h1>
+<p>Create a VCard, a QR code and/or a printable business cards including
+OpenPGP key and fingerprint.</p>
+<p><code class="docutils literal"><span class="pre">opgpcard</span></code> is a tool to create a VCard [0] including OpenPGP [1] key
+and fingerprint, a QR code [2] of the VCard, a SVG [3] image formatted
+as a “business” card [4] to print including the QR code and or a batch
+of 10 those “business” cards to print in DIN4.</p>
+<p>The idea comes from the Debian pgp-tools [5] <code class="docutils literal"><span class="pre">gpg-key2ps</span></code> script,
+which <em>output a PostScript file which has your Key-ID, UIDs and
+fingerprint nicely formatted for printing paper slips to take with you
+to a signing-party.</em></p>
+<p>However the slips do not have the format of a standard “business” card
+and they tend to be lost. They also do not include a QR code, quite
+useful these days to do not have to type all the OpenPGP fingerprint
+characters.</p>
+<p>Sadly, most of the Address book [5] applications out there, do not
+implement the VCard properties [6] for OpenPGP, so when the QR code in
+these cards is scanned, the Address book application will import the
+mail address, but probably will ignore the OpenPGP key and/or
+fingerprint.</p>
+<p>[0] <a class="reference external" href="https://en.wikipedia.org/wiki/VCard">https://en.wikipedia.org/wiki/VCard</a></p>
+<p>[1] <a class="reference external" href="https://en.wikipedia.org/wiki/QR_code">https://en.wikipedia.org/wiki/QR_code</a></p>
+<p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP">https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP</a></p>
+<p>[3] <a class="reference external" href="https://en.wikipedia.org/wiki/SVG">https://en.wikipedia.org/wiki/SVG</a></p>
+<p>[5] <a class="reference external" href="https://pgp-tools.alioth.debian.org/">https://pgp-tools.alioth.debian.org/</a></p>
+<p>[4] <a class="reference external" href="https://en.wikipedia.org/wiki/Business_card">https://en.wikipedia.org/wiki/Business_card</a></p>
+<p>[5] <a class="reference external" href="https://en.wikipedia.org/wiki/Address_book#Software_address_book">https://en.wikipedia.org/wiki/Address_book#Software_address_book</a></p>
+<p>[6] <a class="reference external" href="https://en.wikipedia.org/wiki/VCard#Properties">https://en.wikipedia.org/wiki/VCard#Properties</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="install.html">Installation</a></p>
+</div>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p>You can download this project in either
+<a class="reference external" href="http://github.com/juga0/opgpcard/zipball/master">zip</a> or
+<a class="reference external" href="http://github.com/juga0/opgpcard/tarball/master">tar</a> formats.</p>
+<p>You can also clone the project with Git by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">juga0</span><span class="o">/</span><span class="n">opgpcard</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bugs-and-features">
+<h2>Bugs and features<a class="headerlink" href="#bugs-and-features" title="Permalink to this headline">¶</a></h2>
+<p>To report a bug or a feature request, please fill in an issue on the
+<a class="reference external" href="https://github.com/juga0/opgpcard/issues">opgpcard issue tracker</a>.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">opgpcard</span></code> is Copyright 2016, 2017 by juga (juga at riseup dot net)
+under the terms of the <a class="reference external" href="http://www.gnu.org/licenses/">GPLv3</a> license.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to opgpcard’s documentation!</a></li>
+      <li>Next: <a href="install.html" title="next chapter">Installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, juga.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/README.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

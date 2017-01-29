@@ -1,0 +1,205 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>opgpcard Python API Reference &#8212; opgpcard 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TODO" href="todo.html" />
+    <link rel="prev" title="Adress book applications that support OpenPGP properties when importing vcard_utils" href="vcftools.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="opgpcard-python-api-reference">
+<h1>opgpcard Python API Reference<a class="headerlink" href="#opgpcard-python-api-reference" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="opgpcard-package">
+<h1>opgpcard package<a class="headerlink" href="#opgpcard-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-opgpcard.opgpcard">
+<span id="opgpcard-opgpcard-module"></span><h2>opgpcard.opgpcard module<a class="headerlink" href="#module-opgpcard.opgpcard" title="Permalink to this headline">¶</a></h2>
+<p>opgpcard main functions</p>
+<dl class="function">
+<dt id="opgpcard.opgpcard.fp_no_spaces">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">fp_no_spaces</code><span class="sig-paren">(</span><em>fp</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.fp_no_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.opgpcard.fp_spaces">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">fp_spaces</code><span class="sig-paren">(</span><em>fp</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.fp_spaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.opgpcard.extract_card_qr_coord">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">extract_card_qr_coord</code><span class="sig-paren">(</span><em>xpath_square</em>, <em>template_path='/home/user/_my/code/opgpcard/opgpcard/data/opgpcard_template.svg'</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.extract_card_qr_coord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.opgpcard.gen_base_card_tree">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">gen_base_card_tree</code><span class="sig-paren">(</span><em>xpath_text_dict</em>, <em>card_path</em>, <em>template_path='/home/user/_my/code/opgpcard/opgpcard/data/opgpcard_template.svg'</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.gen_base_card_tree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.opgpcard.include_qr_elem_path_in_card">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">include_qr_elem_path_in_card</code><span class="sig-paren">(</span><em>card_path</em>, <em>card_tree</em>, <em>qr_svg_path</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.include_qr_elem_path_in_card" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.opgpcard.gen_opgpcard">
+<code class="descclassname">opgpcard.opgpcard.</code><code class="descname">gen_opgpcard</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.opgpcard.gen_opgpcard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-opgpcard.conf">
+<span id="opgpcard-conf-module"></span><h2>opgpcard.conf module<a class="headerlink" href="#module-opgpcard.conf" title="Permalink to this headline">¶</a></h2>
+<p>opgpcard configuration.</p>
+</div>
+<div class="section" id="module-opgpcard.gpg_utils">
+<span id="opgpcard-gpg-utils-module"></span><h2>opgpcard.gpg_utils module<a class="headerlink" href="#module-opgpcard.gpg_utils" title="Permalink to this headline">¶</a></h2>
+<p>opgpcard GPG utils</p>
+<dl class="function">
+<dt id="opgpcard.gpg_utils.obtain_key_attrs_from_key">
+<code class="descclassname">opgpcard.gpg_utils.</code><code class="descname">obtain_key_attrs_from_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.gpg_utils.obtain_key_attrs_from_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.gpg_utils.obtain_skeys">
+<code class="descclassname">opgpcard.gpg_utils.</code><code class="descname">obtain_skeys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.gpg_utils.obtain_skeys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.gpg_utils.obtain_key_from_email">
+<code class="descclassname">opgpcard.gpg_utils.</code><code class="descname">obtain_key_from_email</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.gpg_utils.obtain_key_from_email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.gpg_utils.obtain_key_attrs_from_email">
+<code class="descclassname">opgpcard.gpg_utils.</code><code class="descname">obtain_key_attrs_from_email</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.gpg_utils.obtain_key_attrs_from_email" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-opgpcard.qrsvg">
+<span id="opgpcard-qrsvg-module"></span><h2>opgpcard.qrsvg module<a class="headerlink" href="#module-opgpcard.qrsvg" title="Permalink to this headline">¶</a></h2>
+<p>opgpcard functions to generate QR code.</p>
+<dl class="function">
+<dt id="opgpcard.qrsvg.gen_qr_svgimage">
+<code class="descclassname">opgpcard.qrsvg.</code><code class="descname">gen_qr_svgimage</code><span class="sig-paren">(</span><em>vcard</em>, <em>qr_path</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.qrsvg.gen_qr_svgimage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.qrsvg.extract_qr_elem_path">
+<code class="descclassname">opgpcard.qrsvg.</code><code class="descname">extract_qr_elem_path</code><span class="sig-paren">(</span><em>qr_path</em>, <em>qr_svg_path_xpath</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.qrsvg.extract_qr_elem_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.qrsvg.obtain_qr_svg_width">
+<code class="descclassname">opgpcard.qrsvg.</code><code class="descname">obtain_qr_svg_width</code><span class="sig-paren">(</span><em>qr_path</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.qrsvg.obtain_qr_svg_width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.qrsvg.add_transform_attr_qr_elem_path">
+<code class="descclassname">opgpcard.qrsvg.</code><code class="descname">add_transform_attr_qr_elem_path</code><span class="sig-paren">(</span><em>square_attrs</em>, <em>qr_svg_path</em>, <em>qr_svg_width</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.qrsvg.add_transform_attr_qr_elem_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-opgpcard.vcard_utils">
+<span id="opgpcard-vcard-utils-module"></span><h2>opgpcard.vcard_utils module<a class="headerlink" href="#module-opgpcard.vcard_utils" title="Permalink to this headline">¶</a></h2>
+<p>opgpcard functions to generate VCard</p>
+<dl class="function">
+<dt id="opgpcard.vcard_utils.gen_vcard_attrs_dict">
+<code class="descclassname">opgpcard.vcard_utils.</code><code class="descname">gen_vcard_attrs_dict</code><span class="sig-paren">(</span><em>fname</em>, <em>lname</em>, <em>mail</em>, <em>fp</em>, <em>lsign=True</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.vcard_utils.gen_vcard_attrs_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.vcard_utils.gen_text_xpath_dict">
+<code class="descclassname">opgpcard.vcard_utils.</code><code class="descname">gen_text_xpath_dict</code><span class="sig-paren">(</span><em>fname</em>, <em>lname</em>, <em>mail</em>, <em>fp</em>, <em>lsign=True</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.vcard_utils.gen_text_xpath_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="opgpcard.vcard_utils.gen_vcard">
+<code class="descclassname">opgpcard.vcard_utils.</code><code class="descname">gen_vcard</code><span class="sig-paren">(</span><em>vcard_dict</em>, <em>vcard_path</em>, <em>vcard_template_path='/home/user/_my/code/opgpcard/opgpcard/data/opgpcard_template.vcf'</em><span class="sig-paren">)</span><a class="headerlink" href="#opgpcard.vcard_utils.gen_vcard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-opgpcard">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opgpcard" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="vcftools.html" title="previous chapter">Adress book applications that support OpenPGP properties when importing vcard_utils</a></li>
+      <li>Next: <a href="todo.html" title="next chapter">TODO</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, juga.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
