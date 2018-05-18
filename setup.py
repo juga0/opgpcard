@@ -34,8 +34,8 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     install_requires=["qrcode", "lxml", "gpg"],
     extras_require={
-        'dev': ['ipython', 'pyflakes', 'pep8'],
-        'test': ['tox', 'pytest'],
+        'dev': ['flake8', 'pep8'],
+        'test': ['tox', 'pytest', 'coverage'],
         'doc': ['sphinx', 'pylint']
     },
     tests_require=['pytest'],
@@ -45,9 +45,8 @@ setup(
             'opgpcard = opgpcard.cli:main',
         ]
     },
-    # scripts=['scripts/opgpcard'],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         "Environment :: Console",
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Developers',

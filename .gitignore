@@ -9,3 +9,6 @@ build/
 *__pycache__
 .tox
 output/
+.coverage
+.pytest_cache/
+htmlcov/

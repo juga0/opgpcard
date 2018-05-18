@@ -1,18 +1,27 @@
-sudo: required
+sudo: false
 language: python
-dist: trusty
 python:
+    - "3.5"
     - '3.6'
-before_install:
-  - sudo apt install libgpgme++2 libgpgme11-dev
-install:
-  - pip install -U tox
-
-env:
-  matrix:
-    - TESTENV=doc
-    - TESTENV=py36
-    - TESTENV=lint
-
-script:
-  - tox -e $TESTENV tests/
+install: pip install tox-travis
+script: tox
+# before_install:
+#   - sudo apt install libgpgme++2 libgpgme11-dev
+#
+# install:
+#     - pip install -e .; pip install ".[test]"; \
+#       pip install ".[doc]"; pip install ".[dev]"
+#
+# env:
+#     - TOX_ENV=lint
+#     # - TOX_ENV=py36
+#     - TOX_ENV=py35
+#     - TOX_ENV=doc
+#
+# script:
+#   - tox -c tox.ini -e $TOX_ENV
+#   # - coverage run --source=pyac setup.py test
+#
+# after_success:
+#   - coveralls
+#   - codecov
