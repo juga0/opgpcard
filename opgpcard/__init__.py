@@ -38,7 +38,7 @@ a SVG image formatted as a business card to print including the QR code
 and or a batch of 10 those business cards to print in DIN4."""
 __website__ = 'https://github.com/juga0/opgpcard'
 __documentation__ = 'http://opgpcard.readthedocs.io/en/' + __version__
-__copyright__ = """Copyright (C) 2016, 2017 <juga@riseup.net>
+__copyright__ = """Copyright (C) 2016, 2017, 2018 <juga@riseup.net>
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions.

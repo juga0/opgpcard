@@ -74,5 +74,5 @@ To report a bug or a feature request, please fill in an issue on the
 License
 -------
 
-``opgpcard`` is Copyright 2016, 2017 by juga (juga at riseup dot net)
+``opgpcard`` is Copyright 2016, 2017, 2018 by juga (juga at riseup dot net)
 under the terms of the `GPLv3 <http://www.gnu.org/licenses/>`__ license.
