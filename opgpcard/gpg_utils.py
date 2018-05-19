@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # vim:ts=4:sw=4:expandtab 2
 
 # Copyright 2016 juga <juga@riseup.net>
