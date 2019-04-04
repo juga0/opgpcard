@@ -58,18 +58,15 @@ def create_args_parser():
                         '--debug',
                         help='Set logging level to debug',
                         action='store_true')
-    parser.add_argument('-o', '--outputdir', help='',
-                        default=OUTPUT_DIR)
     parser.add_argument('-v', '--version', action='version',
-                        help='version',
+                        help='Show this program version and exit',
                         version='%(prog)s ' + __version__)
-    # Allow cards without any name
-    parser.add_argument('-f', '--firstname', help='', default='')
-    parser.add_argument('-l', '--lastname', help='', default='')
-    parser.add_argument('-p', '--fingerprint', help='')
-    parser.add_argument('-s', '--localsign', help='',
-                        action='store_true', default=True)
-    parser.add_argument('-m', '--mail', help='')
+    parser.add_argument('-f', '--firstname', default='')
+    parser.add_argument('-l', '--lastname', default='')
+    parser.add_argument('-m', '--mail')
+    parser.add_argument('-p', '--fingerprint')
+    parser.add_argument('-s', '--localsign', action='store_true', default=True)
+    parser.add_argument('-o', '--outputdir', default=OUTPUT_DIR)
     return parser
 
 
