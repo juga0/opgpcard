@@ -13,6 +13,7 @@ Welcome to opgpcard's documentation!
    README
    install
    run
+   man_opgpcard
    examples
    vcftools
    api

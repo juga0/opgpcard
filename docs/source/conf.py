@@ -160,8 +160,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'opgpcard', 'opgpcard Documentation',
-     [author], 1)
+    ('man_opgpcard', 'opgpcard', 'OpenPGP printable card', [author], 1),
 ]
 
 
@@ -197,5 +196,3 @@ epub_copyright = copyright
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-
