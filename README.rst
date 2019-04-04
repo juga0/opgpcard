@@ -23,9 +23,7 @@ fingerprint nicely formatted for printing paper slips to take with you
 to a signing-party.*
 
 However the slips do not have the format of a standard "business" card
-and they tend to be lost. They also do not include a QR code, quite
-useful these days to do not have to type all the OpenPGP fingerprint
-characters.
+and they tend to be lost.
 
 Sadly, most of the Address book [5] applications out there, do not
 implement the VCard properties [6] for OpenPGP, so when the QR code in
