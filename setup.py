@@ -3,7 +3,7 @@
 #   This file is part of opgpcard, a set of scripts to
 #   use different tor guards depending on the network we connect to.
 #
-#   Copyright (C) 2016 juga (juga at riseup dot net)
+#   Copyright (C) 2016-2019 juga (juga at riseup dot net)
 #
 #   opgpcard is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License Version 3 of the

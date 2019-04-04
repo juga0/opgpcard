@@ -1,6 +1,6 @@
 # vim:ts=4:sw=4:expandtab 2
 
-# Copyright 2016 juga <juga@riseup.net>
+# Copyright 2016-2019 juga <juga@riseup.net>
 
 # This file is part of opgpcard.
 #

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim:ts=4:sw=4:expandtab
 
-# Copyright 2016 juga <juga@riseup.net>
+# Copyright 2016-2019 juga <juga@riseup.net>
 
 # This file is part of opgpcard.
 #
@@ -38,11 +38,7 @@ a SVG image formatted as a business card to print including the QR code
 and or a batch of 10 those business cards to print in DIN4."""
 __website__ = 'https://github.com/juga0/opgpcard'
 __documentation__ = 'http://opgpcard.readthedocs.io/en/' + __version__
-__copyright__ = """Copyright (C) 2016, 2017, 2018 <juga@riseup.net>
-This program comes with ABSOLUTELY NO WARRANTY.
-This is free software, and you are welcome to redistribute it
-under certain conditions.
-For details see the COPYRIGHT file distributed along this program."""
+__copyright__ = """Copyright (C) 2016-2019 juga <juga@riseup.net>."""
 __license__ = """
 This package is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
