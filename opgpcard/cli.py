@@ -19,7 +19,21 @@
 # You should have received a copy of the GNU General Public License
 # along with opgpcard.  If not, see <http://www.gnu.org/licenses/>.
 
-"""opgpcard main script."""
+"""Create a VCard, a QR code and/or a printable business cards including
+OpenPGP key and fingerprint.
+
+If --fingerprint, --mail AND either --firstname or --lastname are provided,
+a card is generated with those arguments.
+
+If --fingerprint, --mail, --firstname OR --lastname are provided,
+it will search for keys matching those arguments in that order,
+and use the data from the first key and UID found.
+
+If no arguments are provided, it will search for private keys and use the
+data from the first key and UID found.
+
+It will exit with error in any other case.
+"""
 
 import argparse
 import logging
@@ -29,8 +43,17 @@ from .conf import OUTPUT_DIR
 from .opgpcard import gen_opgpcard
 
 
+class RawTextArgumentDefaultsHelpFormatter(
+        argparse.RawTextHelpFormatter, argparse.ArgumentDefaultsHelpFormatter
+        ):
+    pass
+
+
 def create_args_parser():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=RawTextArgumentDefaultsHelpFormatter
+        )
     parser.add_argument('-d',
                         '--debug',
                         help='Set logging level to debug',
