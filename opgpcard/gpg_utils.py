@@ -29,46 +29,41 @@ __all__ = ['obtain_key_attrs_from_key', 'obtain_skeys',
 def obtain_key_attrs_from_key(key):
     # TODO: select which UIDs to include
     # TODO: obtain public key data
-    logger.debug('Getting attributes from the 1st UID.')
     name = key.uids[0].name
     email = key.uids[0].email
-    if name is '':
+    if not name:
         name = email.split('@')[0]
     namesplitted = name.split()
     fname, lname = namesplitted[0], ' '.join(namesplitted[1:])
     fp = key.fpr
-    return {'mail': email, 'fingerprint': fp,
-            'fname': fname, 'lname': lname}
+    key_attrs = {'mail': email, 'fingerprint': fp,
+                 'fname': fname, 'lname': lname}
+    logger.info('Using attributes from the first UID %s.', key_attrs)
+    return key_attrs
 
 
 def obtain_skeys():
     c = gpg.Context()
-    skeys = [k for k in c.keylist(secret=True)]
-    if skeys is []:
-        return None
-    logger.info('Found private keys in your keyring.')
-    logger.info('It is not a good idea to have the private keyring'
-                ' in the same computer as this program.')
+    skeys = list(c.keylist(secret=True))
+    if skeys:
+        logger.info('Found private keys in your keyring.')
     return skeys
 
 
-def obtain_key_from_email(email):
+def obtain_key_from_email(attr):
     # TODO: select key if there're several for the same email.
     c = gpg.Context()
-    keys = [key for key in c.keylist(email)]
-    if keys is []:
+    keys = list(c.keylist(attr))
+    if not keys:
         return None
-    logger.info('Found key with email %s in your keyring.', email)
-    logger.info('It is not a good idea to have the keyring'
-                ' in the same computer as this program.')
-    logger.debug('Taking first key found with the email.')
+    logger.info('Using the first key found matching %s.', attr)
     key = keys[0]
     return key
 
 
-def obtain_key_attrs_from_email(email):
-    key = obtain_key_from_email(email)
-    if key is not None:
+def obtain_key_attrs_from_email(attr):
+    key = obtain_key_from_email(attr)
+    if key:
         attrs = obtain_key_attrs_from_key(key)
         return attrs
     return None
@@ -76,7 +71,8 @@ def obtain_key_attrs_from_email(email):
 
 def obtain_key_attrs():
     skeys = obtain_skeys()
-    if skeys is not None:
+    if skeys:
+        logger.info("Using the first key found.")
         attrs = obtain_key_attrs_from_key(skeys[0])
         return attrs
     return None
