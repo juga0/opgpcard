@@ -24,6 +24,7 @@ import logging
 import os
 import os.path
 import lxml.etree as etree
+import sys
 
 from .conf import (SVG_NAMESPACE, TEMPLATE_10_PATH, XPATH_CARD_SQUARE,
                    XPATH_QRCODE, CARD_10_NAME, XPATH_CARD_QRCODE,
@@ -91,30 +92,51 @@ def include_qr_elem_path_in_card(card_path, card_tree, qr_svg_path):
     else:
         logger.warn('No elements found to apend the QRcode')
     card_tree.write(card_path)
-    logger.debug('Card tree with QR: %s', etree.tostring(card_tree))
+    # logger.debug('Card tree with QR: %s', etree.tostring(card_tree))
     logger.info('QR Code included in card %s', card_path)
     return card_tree
 
 
-def gen_opgpcard(args):
-    # parse args
-    if args.mail and not args.fingerprint and not \
-            args.firstname and not args.lastname:
-        logger.debug('Obtaining attributes for key %s', args.mail)
-        a = gpg_utils.obtain_key_attrs_from_email(args.mail)
-        if a is not None:
+def validate_args(args):
+    # if all needed arguments are provided, return them
+    if args.fingerprint and args.mail and (args.firstname or args.lastname):
+        return args
+    # if any argument is provided, search keys with that attribute
+    # in this order.
+    attrs = args.fingerprint or args.mail or args.firstname or args.lastname
+    if attrs:
+        logger.debug('Obtaining key containing %s', attrs)
+        a = gpg_utils.obtain_key_attrs_from_email(attrs)
+        if a:
             args.fingerprint = a['fingerprint']
-            args.firstname = a['fname']
-            args.lastname = a['lname']
-    elif not args.mail and not args.fingerprint and not \
-            args.firstname and not args.lastname:
-        logger.debug('Obtaining keys')
+            args.mail = a['mail']
+            # Use args if provided, otherwise use key attrs
+            args.firstname = args.firstname or a['fname']
+            args.lastname = args.lastname or a['lname']
+            return args
+        logger.info("No key found matching %s.", attrs)
+        return None
+    # if no argument is provided, search keys and if non found, exit
+    if not (args.mail and args.fingerprint and
+            (args.firstname or args.lastname)):
+        logger.info('No arguments provided, searching for keys.')
         a = gpg_utils.obtain_key_attrs()
-        if a is not None:
+        if a:
             args.mail = a['mail']
             args.fingerprint = a['fingerprint']
             args.firstname = a['fname']
             args.lastname = a['lname']
+            return args
+        # No arg provided, and no key found, exit
+        logger.info("No keys found.")
+        return None
+
+
+def gen_opgpcard(args):
+    args = validate_args(args)
+    if not args:
+        logger.info("Can not create card. Please provide more arguments.")
+        sys.exit(1)
     # initialize file paths
     output_path = args.outputdir
     if not os.path.isdir(output_path):
