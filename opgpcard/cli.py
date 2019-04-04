@@ -29,7 +29,7 @@ from .conf import OUTPUT_DIR
 from .opgpcard import gen_opgpcard
 
 
-def main():
+def create_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('-d',
                         '--debug',
@@ -40,12 +40,18 @@ def main():
     parser.add_argument('-v', '--version', action='version',
                         help='version',
                         version='%(prog)s ' + __version__)
-    parser.add_argument('-f', '--firstname', help='')
-    parser.add_argument('-l', '--lastname', help='')
+    # Allow cards without any name
+    parser.add_argument('-f', '--firstname', help='', default='')
+    parser.add_argument('-l', '--lastname', help='', default='')
     parser.add_argument('-p', '--fingerprint', help='')
     parser.add_argument('-s', '--localsign', help='',
                         action='store_true', default=True)
     parser.add_argument('-m', '--mail', help='')
+    return parser
+
+
+def main():
+    parser = create_args_parser()
     args = parser.parse_args()
 
     if args.debug:
