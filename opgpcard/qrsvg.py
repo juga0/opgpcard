@@ -20,7 +20,7 @@
 
 """opgpcard functions to generate QR code."""
 import logging
-import lxml.etree as etree
+from lxml import etree
 from qrcode.main import QRCode
 from qrcode.image.svg import SvgPathImage
 

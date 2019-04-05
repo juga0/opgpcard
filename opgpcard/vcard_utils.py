@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 __all__ = ['gen_vcard_attrs_dict', 'gen_text_xpath_dict', 'gen_vcard']
 
 
-def gen_vcard_attrs_dict(fname, lname, mail, fp, lsign=True):
+def gen_vcard_attrs_dict(fname, lname, mail, fp):
     vcard_dict = {'fname': fname, 'lname': lname, 'mail': mail, 'fp': fp}
     logger.debug('vcard_dict %s.', vcard_dict)
     return vcard_dict

@@ -23,8 +23,8 @@
 import logging
 import os
 import os.path
-import lxml.etree as etree
 import sys
+from lxml import etree
 
 from .conf import (SVG_NAMESPACE, TEMPLATE_10_PATH, XPATH_CARD_SQUARE,
                    XPATH_QRCODE, CARD_10_NAME, XPATH_CARD_QRCODE,
@@ -90,7 +90,7 @@ def include_qr_elem_path_in_card(card_path, card_tree, qr_svg_path):
         e = elements[0]
         e.append(qr_svg_path)
     else:
-        logger.warn('No elements found to apend the QRcode')
+        logger.warning('No elements found to apend the QRcode')
     card_tree.write(card_path)
     # logger.debug('Card tree with QR: %s', etree.tostring(card_tree))
     logger.info('QR Code included in card %s', card_path)
@@ -130,7 +130,7 @@ def validate_args(args):
         # No arg provided, and no key found, exit
         logger.info("No keys found.")
         return None
-
+    return None
 
 def gen_opgpcard(args):
     args = validate_args(args)
@@ -184,7 +184,7 @@ def gen_opgpcard(args):
                                          TEMPLATE_PATH)
 
     # qrcode svg
-    qr_img, qr_img_box_width = qrsvg.gen_qr_svgimage(vcard, qr_path)
+    qrsvg.gen_qr_svgimage(vcard, qr_path)
     qr_svg_path = qrsvg.extract_qr_elem_path(qr_path,
                                              XPATH_QRCODE)
     qr_svg_width = qrsvg.obtain_qr_svg_width(qr_path)
