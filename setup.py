@@ -34,7 +34,8 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     install_requires=["qrcode", "lxml", "gpg"],
     extras_require={
-        'dev': ['flake8', 'pep8'],
+        # vulture: find unused code
+        'dev': ['flake8', 'vulture'],
         'test': ['tox', 'pytest', 'coverage'],
         'doc': ['sphinx', 'pylint']
     },
