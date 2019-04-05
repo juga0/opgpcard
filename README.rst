@@ -1,13 +1,13 @@
 opgpcard - OpenPGP Card
 =======================
 
-.. image:: https://badge.fury.io/py/opgpcard.svg
-    :target: https://badge.fury.io/py/opgpcard
-    :alt: Latest stable version
-
-.. image:: https://travis-ci.org/juga0/opgpcard.svg?branch=master
-    :target: https://travis-ci.org/juga0/opgpcard?branch=master
-    :alt: Travis-CI
+.. .. image:: https://badge.fury.io/py/opgpcard.svg
+..     :target: https://badge.fury.io/py/opgpcard
+..     :alt: Latest stable version
+.. currently not working
+.. .. image:: https://travis-ci.org/juga0/opgpcard.svg?branch=master
+..     :target: https://travis-ci.org/juga0/opgpcard?branch=master
+..     :alt: Travis-CI
 
 Create a VCard, a QR code and/or a printable business cards including
 OpenPGP key and fingerprint.
