@@ -1,29 +1,29 @@
-opgpcard Python API Reference
-==============================
+API Reference
+=============
 
 opgpcard package
-=================
+================
 
 Submodules
 ----------
 
-opgpcard\.opgpcard module
--------------------------
+opgpcard.cli module
+-------------------
 
-.. automodule:: opgpcard.opgpcard
+.. automodule:: opgpcard.cli
     :members:
     :undoc-members:
     :show-inheritance:
 
-opgpcard\.conf module
--------------------------
+opgpcard.conf module
+--------------------
 
 .. automodule:: opgpcard.conf
     :members:
     :undoc-members:
     :show-inheritance:
 
-opgpcard\.gpg_utils module
+opgpcard.gpg\_utils module
 --------------------------
 
 .. automodule:: opgpcard.gpg_utils
@@ -31,16 +31,24 @@ opgpcard\.gpg_utils module
     :undoc-members:
     :show-inheritance:
 
-opgpcard\.qrsvg module
-----------------------------
+opgpcard.opgpcard module
+------------------------
+
+.. automodule:: opgpcard.opgpcard
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+opgpcard.qrsvg module
+---------------------
 
 .. automodule:: opgpcard.qrsvg
     :members:
     :undoc-members:
     :show-inheritance:
 
-opgpcard\.vcard_utils module
------------------------------
+opgpcard.vcard\_utils module
+----------------------------
 
 .. automodule:: opgpcard.vcard_utils
     :members:
