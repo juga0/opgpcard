@@ -2,25 +2,54 @@
 Installation
 =============
 
+The recommended method  is to install it from your system
+distribution.
+
+In Debian/Ubuntu systems::
+
+    sudo apt install opgpcard
+
 Installation for developers
------------------------------
+---------------------------
 
-It is recommended to install ``opgpcard`` in a python virtual environment.
+System requirements
+~~~~~~~~~~~~~~~~~~~
 
-Check https://virtualenv.pypa.io/en/latest/installation.html. In Debian::
+- Python 3 (>= 3.5)
+- GPGME_
+- SWIG_ (to build GPGME_)
+- virtualenv_ (it is recommended to install the required python dependencies
+  in a virtualenv)
 
-    sudo apt install python-virtualenv
+In Debian::
 
-Create a virtual environment::
+    sudo apt install python3 swig libgpgme-dev virtualenv
 
-    mkdir ~/.virtualenvs
-    virtualenv ~/.virtualenvs/opgpcardenv
-    source ~/.virtualenvs/opgpcardenv/bin/activate
+Python dependencies
+~~~~~~~~~~~~~~~~~~~
 
-Get the sources::
+- qrcode_
+- lxml_
+- gpg_
 
-    git clone https://github.com/juga0/opgpcard
+To install the Python dependencies, create a ``virtualenv`` first
 
-Install it::
+::
 
-    pip install -e .
+    virtualenv venv -p /usr/bin/python3
+    source venv/bin/activate
+
+Clone ``opgpcard``::
+
+    git clone https://github.com/juga0/opgpcard.git
+
+Install the python dependencies::
+
+    cd opgpcard && pip install .
+
+.. _SWIG: http://swig.org/
+.. _GPGME: https://www.gnupg.org/related_software/gpgme/
+.. _virtualenv: https://virtualenv.pypa.io/en/stable/installation/
+.. _qrcode: https://pypi.python.org/pypi/qrcode/
+.. _lxml: https://lxml.de/
+.. _gpg: https://pypi.org/project/gpg/

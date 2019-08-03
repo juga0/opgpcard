@@ -50,7 +50,8 @@ fingerprint.
 Installation
 ------------
 
-See `Installation <install.html>`__
+See `<docs/source/install.rst>`_ (in the local directory or GitHub) or
+`<https://opgpcard.readthedocs.io/en/latest/install.html>`_ .
 
 Download
 --------

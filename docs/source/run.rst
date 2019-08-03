@@ -7,6 +7,6 @@ To know which arguments you can run ``opgpcard`` with, run::
 
 Or see the manual page:
 
-- ``man docs/source/man_opgpcard.rst`` (in a opgpcard respository)
-- ``man opgpcard (if Debian package is`` installed)
-- `docs/build/html/man_opgpcard.html <man_opgpcard.html>`_ (in a browser)
+- ``man opgpcard`` (if installed via Debian package)
+- ``man docs/source/man_opgpcard.rst`` (in the local respository)
+- `<https://opgpcard.readthedocs.io/en/latest/man_opgpcard.html>`_
