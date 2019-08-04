@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.3.0 (2019-08-04)
+------------------
+
+Changes
+~~~~~~~
+
+- Docs: links depend on from where docs are read
+- CI: Pass the tests
+- Make rtfd be able to build documentation
+- Docs: Reorganize/rename submodules API
 
 0.2.0 (2019-04-04)
 ------------------

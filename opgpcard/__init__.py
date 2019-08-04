@@ -25,7 +25,7 @@ except ImportError:
         from setuptools_scm import get_version
         version = get_version()
     except (ImportError, LookupError):
-        version = '0.2.0'
+        version = '0.3.0'
 
 __version__ = version
 __author__ = "juga"
