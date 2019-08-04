@@ -132,6 +132,7 @@ def validate_args(args):
         return None
     return None
 
+
 def gen_opgpcard(args):
     args = validate_args(args)
     if not args:

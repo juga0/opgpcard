@@ -1,25 +1,26 @@
-sudo: false
-dist: xenial
+sudo: required
+dist: bionic
 language: python
 python:
-    - "3.5"
-    - '3.6'
-    - "3.7"
-# install: pip install tox-travis
-# script:
-    # - tox
-    # This is not in included in the tox envlist, in order to don't need Internet
-    # when running tox
-    # - tox -e doclinks
-    # - tox -e clean
+  - '3.6'
+  - "3.7"
+  - "3.8-dev"
+#   - "nightly"
+#   - "pypy3.5"
+install: pip install tox-travis
+script:
+  - tox
+  # This is not in included in the tox envlist, in order to don't need Internet
+  # when running tox
+  # - tox -e doclinks
+  - tox -e clean
 
-# this should be in xenial: https://packages.ubuntu.com/xenial/libgpgme11-dev
-# but fails:
-# E: Unable to locate package libgpgme11-dev
-# The command "sudo apt install libgpgme11-dev" failed and exited with 100 during .
-# before_install:
-#    - sudo apt install libgpgme11-dev
+before_install:
+  - gpg --version
+  - sudo apt update && sudo apt install -y libgpgme-dev swig
 
-# after_success:
-#   - coveralls
-#   - codecov
+# This is not installed before
+# addons:
+#   apt:
+#     packages:
+#       - libgpgme-dev
