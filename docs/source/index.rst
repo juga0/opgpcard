@@ -16,7 +16,6 @@ Welcome to opgpcard's documentation!
    man_opgpcard
    examples
    vcftools
-   api
    todo
 
 

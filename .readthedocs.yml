@@ -1,14 +1,24 @@
-# with rtfd ubuntu xenail, this fails:
-# Collecting gpg==1.8.0 (from -r requirements.txt (line 1))
-#   Using cached https://files.pythonhosted.org/packages/9f/46/4f6b63d1b5b82bac52b5b7723df8cd66a4864dc29861aa14d2d2de4a57f5/gpg-1.8.0.tar.gz
-#     Complete output from command python setup.py egg_info:
-#     Could not find gpg-error-config.  Please install the libgpg-error development package.
-#
-#     ----------------------------------------
-# Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-install-AZinjk/gpg
+version: 2
+build:
+  image: latest
+
+sphinx:
+  # Ignores it, apprently
+  # configuration: docs/source/conf_rtfd.py
+  configuration: docs/source/conf.py
+  builder: html
+
+formats: [epub]
+
 python:
-  version: 3.5
-    - method: pip
-      path: .
-      extra_requirements:
-        - doc
+  version: 3.7
+  install:
+    - requirements: docs/requirements.txt
+# This is not used to don't depend on python3-gpg that depends on libgpgme-dev
+# and it's not installed in rtfd.
+#   # To run "pip install ." in rtfd.io
+#   pip_install: true
+
+# # To run "pip install .[doc]" in rtfd.io
+# extra_requirements:
+#   - doc
