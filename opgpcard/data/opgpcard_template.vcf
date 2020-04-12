@@ -3,7 +3,7 @@ fn:%(fname)s %(lname)s
 n:%(fname)s
 email;internet:%(mail)s
 key;pgp;http://pool.sks-keyservers.net:11371/pks/lookup?op=get&search=%(mail)s
-OPENPGP4FPR:%(fp)s
+KEY:OPENPGP4FPR:%(fp)s
 X-KADDRESSBOOK-OPENPGPFP:%(fp)s
 NOTE:vCard generate with opgpcard (https://github.com/juga0/opgpcard)
 version:2.1
